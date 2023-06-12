@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@1,500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #fdc500;
+  --bg-color: #343a40;
+  --secondary-color: #878e92;
+}
+body {
+  max-height: 100vh;
+  max-width: 100%;
+}
+html {
+  font-family: "Nunito sans", sans-serif;
+}
+header nav {
+  color: var(--primary-color);
+  background-color: var(--bg-color);
+  display: flex;
+  align-items: center;
+  padding: 15px 60px;
+}
+nav h3.nav-brand {
+  letter-spacing: 2px;
+  margin-right: auto;
+}
+form.search input {
+  padding: 5px;
+  font-family: "Nunito sans", sans-serif;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  min-width: 230px;
+  margin-right: 20px;
+  background-color: gainsboro;
+}
+form.search button {
+  padding: 7px 20px;
+  background-color: var(--primary-color);
+  color: #343a40;
+  border-radius: 10px;
+  font-family: "Nunito sans", sans-serif;
+  border: 1px;
+  transition: 0.3s linear;
+}
+form.search button:hover {
+  background-color: #444c53;
+  color: #fdc500;
+}
+main {
+  padding: 20px;
+  overflow: auto;
+  max-height: 90vh;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 40px;
+  justify-content: space-between;
+}
+.card {
+  width: 20%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #eef1ef;
+  border: 1px;
+  transition: 0.3s ease;
+}
+.card-img {
+  width: 100%;
+  object-fit: cover;
+  max-height: 400px;
+}
+.card-body {
+  padding: 0px 10px;
+  text-align: left;
+}
+.card-title {
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  font-size: 1.5rem;
+}
+.card-text {
+  font-size: 1.12rem;
+}
+.indicators {
+  font-weight: 600;
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 3px 2px 5px #878e92;
+  background-color: #e9ecef;
+}
+
+@media screen and (max-width: 540px) {
+  .card {
+    width: 100% !important;
+  }
+  header nav {
+    display: block;
+    text-align: center;
+  }
+  form.search {
+    display: none;
+  }
+  .card-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  .card-text {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  .card {
+    width: 48%;
+  }
+}
