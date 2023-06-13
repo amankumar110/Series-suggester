@@ -27,6 +27,7 @@ async function showMostPopular() {
       `;
 
     main.appendChild(card);
+    page += 1;
   });
 }
 
