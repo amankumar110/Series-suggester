@@ -1,7 +1,10 @@
 const main = document.querySelector("main");
+const body = document.body;
 let page = 1;
 const baseUrl = `https://www.episodate.com/api/`;
+
 window.addEventListener("load", showMostPopular);
+
 async function getShows(query) {
   const res = await fetch(`${baseUrl}${query}`);
   return await res.json();
@@ -26,9 +29,12 @@ async function showMostPopular() {
     main.appendChild(card);
   });
 }
-main.addEventListener("scroll", () => {
-  if (main.scrollTop >= main.scrollHeight - 592) {
-    page += 1;
+
+window.addEventListener("scroll", () => {
+  const clientHeight = document.documentElement.clientHeight;
+  const scrolltop = document.documentElement.scrollTop;
+  const fullheight = document.documentElement.scrollHeight;
+  if (clientHeight + scrolltop >= fullheight) {
     showMostPopular();
   }
 });

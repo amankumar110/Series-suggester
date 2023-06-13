@@ -9,10 +9,7 @@
   --bg-color: #343a40;
   --secondary-color: #878e92;
 }
-body {
-  max-height: 100vh;
-  max-width: 100%;
-}
+
 html {
   font-family: "Nunito sans", sans-serif;
 }
@@ -30,8 +27,6 @@ nav h3.nav-brand {
 
 main {
   padding: 20px;
-  overflow: auto;
-  max-height: 90vh;
   display: flex;
   flex-wrap: wrap;
   column-gap: 20px;
